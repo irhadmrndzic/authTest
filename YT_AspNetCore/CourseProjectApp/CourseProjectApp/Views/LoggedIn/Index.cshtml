@@ -1,0 +1,101 @@
+﻿@model CourseProjectApp.ViewModels.DashboardViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<p style="margin-top:60px;"></p>
+<div class="ui two column doubling stackable grid container">
+    <div class="column">
+        <a class="ui card">
+            <div class="content">
+                <div class="header">Individual</div>
+                <div class="meta"></div>
+                <div class="description">
+                    @foreach (var item in Model.Individuals)
+                    {
+                        <div class="ui list">
+                            <input type="hidden" value="@item.IndividualId" />
+                            <div class="item">@item.FullName</div>
+                            <div class="item">@item.DateOfBirth.ToString("dd-MM-yyyy")</div>
+                            <div class="item">@item.Address</div>
+                            <div class="item">@item.City</div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="right floated author">
+                    <button class="ui primary button">Edit</button>
+                </div>
+            </div>
+        </a>
+
+        <div class="column">
+            <a class="ui card">
+                <div class="content">
+                    <div class="header">Organization</div>
+                    <div class="meta"></div>
+                    <div class="description">
+                        @foreach (var item in Model.Organization)
+                        {
+                            <div class="ui list">
+                                <input type="hidden" value="@item.OrganizationId" />
+                                <div class="item">@item.BussinessName</div>
+                                <div class="item">@item.HireDate.ToString("dd-MM-yyyy")</div>
+                                <div class="item">@item.Profession</div>
+                                <div class="item">@item.Address</div>
+                                <div class="item">@item.City</div>
+
+                            </div>
+                        }
+
+                    </div>
+                </div>
+                <div class="extra content">
+                    <div class="right floated author">
+                        <button class="ui primary button">Edit</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+            <a class="ui card">
+                <div class="content">
+                    <div class="header">Hobbies</div>
+                    <div class="meta"></div>
+                    <div class="description">
+                        @foreach (var item in Model.Hobby)
+                        {
+                        <div class="ui list">
+                            <input type="hidden" value="@item.HobbiesId" />
+                            <span class="item">@item.Name</span>
+                            <script type="text/javascript">$(document).ready(function () { $(".rating").rating(); });</script>
+                            <div class="ui star rating" data-rating="@item.Rating" data-max-rating="5"></div>
+                        </div>
+                        }
+
+                    </div>
+                </div>
+                <div class="extra content">
+                    <div class="right floated author">
+                        <button class="ui primary button">Edit</button>
+                    </div>
+                </div>
+            </a>
+       
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>

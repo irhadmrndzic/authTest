@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    //Layout = null; //overrides viewStart layout
+}
+@*@section header{
+    <p>@ViewBag.myObject.MyGuid</p>
+}*@
+
+
+@*Tag helpers*@
+
+@*<input asp-for="Email" class="form-control"/>*@
+
+@*Partial views pomocu tag helpera, i html helpera, ukoliko se nalazi u istom folderu
+    kao i view koji ga renderuje, onda nije potrebna relativna putanja i ekstenzija*@
+
+@*@Html.Partial("FirstPartialView")*@
+@*@await Html.PartialAsync("FirstPartialView")*@
+
+@*Ukoliko se partial view ne nalazi u istom folderu kao i njegov home view*@
+@*@await Html.PartialAsync("~/Views/PartialView/FirstPartialView.cshtml")*@
+
+@*<partial name="~/Views/PartialView/FirstPartialView.cshtml" />*@
+
+

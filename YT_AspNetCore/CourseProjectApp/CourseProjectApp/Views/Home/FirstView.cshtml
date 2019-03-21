@@ -1,0 +1,28 @@
+﻿@*@model CourseProjectApp.Models.Test*@   @*bez ukljucenog modela IntelliSense nece raditi*@
+
+
+@*<p>@Model.Id</p>
+    <p>@Model.Value</p>*@
+
+@*@model IEnumerable<CourseProjectApp.Models.Test>   Koristi se kada se iz kontrolera salje lista
+
+    @foreach (var item in Model)
+    {
+        <p>@item.Id</p>
+        <p>@item.Value</p>
+    }*@
+
+@*Koristi se kada se iz kontrolera salje ViewModel*@
+
+@*@model CourseProjectApp.ViewModels.TestViewModel*@  @*prebaceno kao using u viewImports*@ 
+
+@*Pristupamo listi*@
+
+@*Premjesteno u partial view*@
+@*@foreach (var item in Model.TipTest)
+{
+    <p>@item.Id</p>
+    <p>@item.Value</p>
+}*@
+
+<partial name="~/Views/PartialView/FirstPartialView.cshtml" />

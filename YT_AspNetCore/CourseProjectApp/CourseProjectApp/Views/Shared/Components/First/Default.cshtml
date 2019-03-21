@@ -1,0 +1,15 @@
+﻿@model CourseProjectApp.Services.IMyInjectedInterface
+
+
+@*
+    Default je naziv viewa koji se u ovom slucaju prosljedjuje u ViewComponent klasi
+     ViewComponents views se smjestaju u Shared folder, podfolder Components i folder koji nosi naziv
+     klase u folderu ViewComponents, zanemarujuci viewcomponents ekstenziju
+     U ovom slucaju, naziv klase je First, a view koji se kreira u podfolderu first nosi naziv Default
+*@
+
+<section>
+
+    <h1>First VIEW COMPONENT</h1>
+    <p>@Model.MyGuid</p>
+</section>
